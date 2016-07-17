@@ -1,0 +1,944 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     30210,        934]
+NotebookOptionsPosition[     28830,        880]
+NotebookOutlinePosition[     29184,        896]
+CellTagsIndexPosition[     29141,        893]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"x", "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{"2", "\[Pi]"}], ")"}], "/", 
+    RowBox[{"(", 
+     RowBox[{"\[Lambda]", "*", "a"}], ")"}]}]}], " ", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{3.671627270585153*^9}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"2", " ", "\[Pi]"}], 
+  RowBox[{"a", " ", "\[Lambda]"}]]], "Output",
+ CellChangeTimes->{3.671627272261489*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"gamma", "[", "x", "]"}], "=", 
+   RowBox[{"x", "*", 
+    RowBox[{"SphericalHankelH1", "[", 
+     RowBox[{"i", ",", "x"}], "]"}]}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"omega", "[", "x", "]"}], "=", 
+  RowBox[{"x", "*", 
+   RowBox[{"SphericalBesselJ", "[", 
+    RowBox[{"i", ",", "x"}], "]"}]}]}], "\[IndentingNewLine]"}], "Input"],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"2", " ", "\[Pi]", " ", 
+   RowBox[{"SphericalHankelH1", "[", 
+    RowBox[{"i", ",", 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], 
+      RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}]}], 
+  RowBox[{"a", " ", "\[Lambda]"}]]], "Output",
+ CellChangeTimes->{3.6716273258660994`*^9}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{"2", " ", "\[Pi]", " ", 
+   RowBox[{"SphericalBesselJ", "[", 
+    RowBox[{"i", ",", 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], 
+      RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}]}], 
+  RowBox[{"a", " ", "\[Lambda]"}]]], "Output",
+ CellChangeTimes->{3.671627325869278*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"d", "=", "1.27"}]], "Input",
+ CellChangeTimes->{{3.67162733794283*^9, 3.67162733827536*^9}}],
+
+Cell[BoxData["1.27`"], "Output",
+ CellChangeTimes->{3.671627341019351*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"alpha", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"omega", "'"}], "[", 
+       RowBox[{"d", "*", "x"}], "]"}], "*", 
+      RowBox[{"omega", "[", "x", "]"}]}], "-", 
+     RowBox[{"d", "*", 
+      RowBox[{"omega", "[", 
+       RowBox[{"d", "*", "x"}], "]"}], "*", 
+      RowBox[{
+       RowBox[{"omega", "'"}], "[", "x", "]"}]}]}], ")"}], "/", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"omega", "'"}], "[", 
+       RowBox[{"d", "*", "x"}], "]"}], "*", 
+      RowBox[{"gamma", "[", "x", "]"}]}], "-", 
+     RowBox[{"d", "*", 
+      RowBox[{"omega", "[", 
+       RowBox[{"d", "*", "x"}], "]"}], "*", 
+      RowBox[{
+       RowBox[{"gamma", "'"}], "[", "x", "]"}]}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.671627349120199*^9, 3.671627397238867*^9}, {
+  3.6716275491852303`*^9, 3.671627560001896*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", " ", "\[Pi]", " ", 
+     RowBox[{"SphericalBesselJ", "[", 
+      RowBox[{"i", ",", 
+       FractionBox[
+        RowBox[{"2", " ", "\[Pi]"}], 
+        RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+     RowBox[{
+      SuperscriptBox["omega", "\[Prime]",
+       MultilineFunction->None], "[", 
+      FractionBox["7.979645340118075`", 
+       RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+    RowBox[{"a", " ", "\[Lambda]"}]], "-", 
+   RowBox[{"1.27`", " ", 
+    RowBox[{"omega", "[", 
+     FractionBox["7.979645340118075`", 
+      RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+    RowBox[{
+     SuperscriptBox["omega", "\[Prime]",
+      MultilineFunction->None], "[", 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], 
+      RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}]}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "1.27`"}], " ", 
+    RowBox[{"omega", "[", 
+     FractionBox["7.979645340118075`", 
+      RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+    RowBox[{
+     SuperscriptBox["gamma", "\[Prime]",
+      MultilineFunction->None], "[", 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], 
+      RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], "+", 
+   FractionBox[
+    RowBox[{"2", " ", "\[Pi]", " ", 
+     RowBox[{"SphericalHankelH1", "[", 
+      RowBox[{"i", ",", 
+       FractionBox[
+        RowBox[{"2", " ", "\[Pi]"}], 
+        RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+     RowBox[{
+      SuperscriptBox["omega", "\[Prime]",
+       MultilineFunction->None], "[", 
+      FractionBox["7.979645340118075`", 
+       RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+    RowBox[{"a", " ", "\[Lambda]"}]]}]]], "Output",
+ CellChangeTimes->{3.671627404278893*^9, 3.671627563273138*^9, 
+  3.671627641795004*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"sigma", "[", "\[Lambda]", "]"}], "=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"2", "*", "\[Pi]"}], ")"}], "*", 
+        RowBox[{"a", "^", "2"}]}], ")"}], "/", 
+      RowBox[{"(", 
+       RowBox[{"x", "^", "2"}], ")"}]}], ")"}], "*", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", "*", "n"}], "+", "1"}], ")"}], "*", 
+    RowBox[{"(", 
+     RowBox[{"alpha", "+", "beta"}], ")"}]}]}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.671627441888583*^9, 3.67162747901429*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   RowBox[{"2", " ", "\[Pi]"}]], 
+  RowBox[{
+   SuperscriptBox["a", "4"], " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "+", 
+     RowBox[{"2", " ", "n"}]}], ")"}], " ", 
+   SuperscriptBox["\[Lambda]", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       FractionBox[
+        RowBox[{"2", " ", "\[Pi]", " ", 
+         RowBox[{"SphericalBesselJ", "[", 
+          RowBox[{"i", ",", 
+           FractionBox[
+            RowBox[{"2", " ", "\[Pi]"}], 
+            RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["omega", "\[Prime]",
+           MultilineFunction->None], "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+        RowBox[{"a", " ", "\[Lambda]"}]], "-", 
+       RowBox[{"1.27`", " ", 
+        RowBox[{"omega", "[", 
+         FractionBox["7.979645340118075`", 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["omega", "\[Prime]",
+          MultilineFunction->None], "[", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}]}], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "1.27`"}], " ", 
+        RowBox[{"omega", "[", 
+         FractionBox["7.979645340118075`", 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["gamma", "\[Prime]",
+          MultilineFunction->None], "[", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], "+", 
+       FractionBox[
+        RowBox[{"2", " ", "\[Pi]", " ", 
+         RowBox[{"SphericalHankelH1", "[", 
+          RowBox[{"i", ",", 
+           FractionBox[
+            RowBox[{"2", " ", "\[Pi]"}], 
+            RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["omega", "\[Prime]",
+           MultilineFunction->None], "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+        RowBox[{"a", " ", "\[Lambda]"}]]}]], "+", 
+     FractionBox[
+      RowBox[{
+       FractionBox[
+        RowBox[{"7.979645340118075`", " ", 
+         RowBox[{"SphericalBesselJ", "[", 
+          RowBox[{"i", ",", 
+           FractionBox[
+            RowBox[{"2", " ", "\[Pi]"}], 
+            RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["omega", "\[Prime]",
+           MultilineFunction->None], "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+        RowBox[{"a", " ", "\[Lambda]"}]], "-", 
+       RowBox[{
+        RowBox[{"omega", "[", 
+         FractionBox["7.979645340118075`", 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["omega", "\[Prime]",
+          MultilineFunction->None], "[", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}]}], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"omega", "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], " ", 
+        RowBox[{
+         SuperscriptBox["gamma", "\[Prime]",
+          MultilineFunction->None], "[", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], "+", 
+       FractionBox[
+        RowBox[{"7.979645340118075`", " ", 
+         RowBox[{"SphericalHankelH1", "[", 
+          RowBox[{"i", ",", 
+           FractionBox[
+            RowBox[{"2", " ", "\[Pi]"}], 
+            RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["omega", "\[Prime]",
+           MultilineFunction->None], "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+        RowBox[{"a", " ", "\[Lambda]"}]]}]]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.6716274961199303`*^9, 3.671627644086516*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"beta", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"d", "*", 
+      RowBox[{
+       RowBox[{"omega", "'"}], "[", 
+       RowBox[{"d", "*", "x"}], "]"}], "*", 
+      RowBox[{"omega", "[", "x", "]"}]}], "-", 
+     RowBox[{
+      RowBox[{"omega", "[", 
+       RowBox[{"d", "*", "x"}], "]"}], "*", 
+      RowBox[{
+       RowBox[{"omega", "'"}], "[", "x", "]"}]}]}], ")"}], "/", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"d", "*", 
+      RowBox[{
+       RowBox[{"omega", "'"}], "[", 
+       RowBox[{"d", "*", "x"}], "]"}], "*", 
+      RowBox[{"gamma", "[", "x", "]"}]}], "-", 
+     RowBox[{
+      RowBox[{"omega", "[", 
+       RowBox[{"d", "*", "x"}], "]"}], "*", 
+      RowBox[{
+       RowBox[{"gamma", "'"}], "[", "x", "]"}]}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.671627492875291*^9, 3.67162754547359*^9}}],
+
+Cell[BoxData[
+ FractionBox[
+  RowBox[{
+   FractionBox[
+    RowBox[{"7.979645340118075`", " ", 
+     RowBox[{"SphericalBesselJ", "[", 
+      RowBox[{"i", ",", 
+       FractionBox[
+        RowBox[{"2", " ", "\[Pi]"}], 
+        RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+     RowBox[{
+      SuperscriptBox["omega", "\[Prime]",
+       MultilineFunction->None], "[", 
+      FractionBox["7.979645340118075`", 
+       RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+    RowBox[{"a", " ", "\[Lambda]"}]], "-", 
+   RowBox[{
+    RowBox[{"omega", "[", 
+     FractionBox["7.979645340118075`", 
+      RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+    RowBox[{
+     SuperscriptBox["omega", "\[Prime]",
+      MultilineFunction->None], "[", 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], 
+      RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}]}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"omega", "[", 
+      FractionBox["7.979645340118075`", 
+       RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], " ", 
+    RowBox[{
+     SuperscriptBox["gamma", "\[Prime]",
+      MultilineFunction->None], "[", 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], 
+      RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], "+", 
+   FractionBox[
+    RowBox[{"7.979645340118075`", " ", 
+     RowBox[{"SphericalHankelH1", "[", 
+      RowBox[{"i", ",", 
+       FractionBox[
+        RowBox[{"2", " ", "\[Pi]"}], 
+        RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+     RowBox[{
+      SuperscriptBox["omega", "\[Prime]",
+       MultilineFunction->None], "[", 
+      FractionBox["7.979645340118075`", 
+       RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+    RowBox[{"a", " ", "\[Lambda]"}]]}]]], "Output",
+ CellChangeTimes->{3.671627582065617*^9, 3.671627647905962*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"alpha", "=", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"omega", "'"}], "[", 
+       RowBox[{"d", "*", "x"}], "]"}], "*", 
+      RowBox[{"omega", "[", "x", "]"}]}], "-", 
+     RowBox[{"d", "*", 
+      RowBox[{"omega", "[", 
+       RowBox[{"d", "*", "x"}], "]"}], "*", 
+      RowBox[{
+       RowBox[{"omega", "'"}], "[", "x", "]"}]}]}], ")"}], "/", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"omega", "'"}], "[", 
+       RowBox[{"d", "*", "x"}], "]"}], "*", 
+      RowBox[{"alpha", "[", "x", "]"}]}], "-", 
+     RowBox[{"d", "*", 
+      RowBox[{"omega", "[", 
+       RowBox[{"d", "*", "x"}], "]"}], "*", 
+      RowBox[{
+       RowBox[{"gamma", "'"}], "[", "x", "]"}]}]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.671627595183922*^9, 3.67162761902862*^9}, {
+  3.671627654060915*^9, 3.6716276701587467`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"2", " ", "\[Pi]", " ", 
+      RowBox[{"SphericalBesselJ", "[", 
+       RowBox[{"i", ",", 
+        FractionBox[
+         RowBox[{"2", " ", "\[Pi]"}], 
+         RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+      RowBox[{
+       SuperscriptBox["omega", "\[Prime]",
+        MultilineFunction->None], "[", 
+       FractionBox["7.979645340118075`", 
+        RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+     RowBox[{"a", " ", "\[Lambda]"}]], "-", 
+    RowBox[{"1.27`", " ", 
+     RowBox[{"omega", "[", 
+      FractionBox["7.979645340118075`", 
+       RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+     RowBox[{
+      SuperscriptBox["omega", "\[Prime]",
+       MultilineFunction->None], "[", 
+      FractionBox[
+       RowBox[{"2", " ", "\[Pi]"}], 
+       RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}]}], ")"}], "/", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "1.27`"}], " ", 
+     RowBox[{"omega", "[", 
+      FractionBox["7.979645340118075`", 
+       RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+     RowBox[{
+      SuperscriptBox["gamma", "\[Prime]",
+       MultilineFunction->None], "[", 
+      FractionBox[
+       RowBox[{"2", " ", "\[Pi]"}], 
+       RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], "+", 
+    RowBox[{
+     RowBox[{
+      SuperscriptBox["omega", "\[Prime]",
+       MultilineFunction->None], "[", 
+      FractionBox["7.979645340118075`", 
+       RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+     RowBox[{
+      FractionBox[
+       RowBox[{
+        FractionBox[
+         RowBox[{"2", " ", "\[Pi]", " ", 
+          RowBox[{"SphericalBesselJ", "[", 
+           RowBox[{"i", ",", 
+            FractionBox[
+             RowBox[{"2", " ", "\[Pi]"}], 
+             RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+          RowBox[{
+           SuperscriptBox["omega", "\[Prime]",
+            MultilineFunction->None], "[", 
+           FractionBox["7.979645340118075`", 
+            RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+         RowBox[{"a", " ", "\[Lambda]"}]], "-", 
+        RowBox[{"1.27`", " ", 
+         RowBox[{"omega", "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["omega", "\[Prime]",
+           MultilineFunction->None], "[", 
+          FractionBox[
+           RowBox[{"2", " ", "\[Pi]"}], 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}]}], 
+       RowBox[{
+        RowBox[{
+         RowBox[{"-", "1.27`"}], " ", 
+         RowBox[{"omega", "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["gamma", "\[Prime]",
+           MultilineFunction->None], "[", 
+          FractionBox[
+           RowBox[{"2", " ", "\[Pi]"}], 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], "+", 
+        FractionBox[
+         RowBox[{"2", " ", "\[Pi]", " ", 
+          RowBox[{"SphericalHankelH1", "[", 
+           RowBox[{"i", ",", 
+            FractionBox[
+             RowBox[{"2", " ", "\[Pi]"}], 
+             RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+          RowBox[{
+           SuperscriptBox["omega", "\[Prime]",
+            MultilineFunction->None], "[", 
+           FractionBox["7.979645340118075`", 
+            RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+         RowBox[{"a", " ", "\[Lambda]"}]]}]], "[", 
+      FractionBox[
+       RowBox[{"2", " ", "\[Pi]"}], 
+       RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{3.6716276773814793`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   SuperscriptBox["x", "2"]], 
+  RowBox[{"2", " ", 
+   SuperscriptBox["a", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "+", 
+     RowBox[{"2", " ", "i"}]}], ")"}], " ", "\[Pi]", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       RowBox[{"d", " ", "*", " ", 
+        RowBox[{"omega", "[", "x", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["omega", "\[Prime]",
+          MultilineFunction->None], "[", 
+         RowBox[{"d", "*", "x"}], "]"}]}], "-", 
+       RowBox[{
+        RowBox[{"omega", "[", 
+         RowBox[{"d", "*", "x"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["omega", "\[Prime]",
+          MultilineFunction->None], "[", "x", "]"}]}]}], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"omega", "[", 
+          RowBox[{"d", "*", "x"}], "]"}]}], " ", 
+        RowBox[{
+         SuperscriptBox["gamma", "\[Prime]",
+          MultilineFunction->None], "[", "x", "]"}]}], "+", 
+       RowBox[{"d", "*", 
+        RowBox[{"gamma", "[", "x", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["omega", "\[Prime]",
+          MultilineFunction->None], "[", 
+         RowBox[{"d", "*", "x"}], "]"}]}]}]], "+", 
+     FractionBox[
+      RowBox[{
+       RowBox[{
+        RowBox[{"omega", "[", "x", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["omega", "\[Prime]",
+          MultilineFunction->None], "[", 
+         RowBox[{"d", "*", "x"}], "]"}]}], "-", 
+       RowBox[{"d", "*", " ", 
+        RowBox[{"omega", "[", 
+         RowBox[{"d", "*", "x"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["omega", "\[Prime]",
+          MultilineFunction->None], "[", "x", "]"}]}]}], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "d"}], "*", 
+        RowBox[{"omega", "[", 
+         RowBox[{"d", "*", "x"}], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["gamma", "\[Prime]",
+          MultilineFunction->None], "[", "x", "]"}]}], "+", 
+       RowBox[{
+        RowBox[{"gamma", "[", "x", "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["omega", "\[Prime]",
+          MultilineFunction->None], "[", 
+         RowBox[{"d", "*", "x"}], "]"}]}]}]]}], ")"}]}]}]], "Input",
+ CellChangeTimes->{{3.671627693387869*^9, 3.671627799976364*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", 
+   RowBox[{"2", " ", "\[Pi]"}]], 
+  RowBox[{
+   SuperscriptBox["a", "4"], " ", 
+   RowBox[{"(", 
+    RowBox[{"1", "+", 
+     RowBox[{"2", " ", "i"}]}], ")"}], " ", 
+   SuperscriptBox["\[Lambda]", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       FractionBox[
+        RowBox[{"2", " ", "\[Pi]", " ", 
+         RowBox[{"SphericalBesselJ", "[", 
+          RowBox[{"i", ",", 
+           FractionBox[
+            RowBox[{"2", " ", "\[Pi]"}], 
+            RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["omega", "\[Prime]",
+           MultilineFunction->None], "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+        RowBox[{"a", " ", "\[Lambda]"}]], "-", 
+       RowBox[{"1.27`", " ", 
+        RowBox[{"omega", "[", 
+         FractionBox["7.979645340118075`", 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["omega", "\[Prime]",
+          MultilineFunction->None], "[", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}]}], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "1.27`"}], " ", 
+        RowBox[{"omega", "[", 
+         FractionBox["7.979645340118075`", 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["gamma", "\[Prime]",
+          MultilineFunction->None], "[", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], "+", 
+       FractionBox[
+        RowBox[{"2", " ", "\[Pi]", " ", 
+         RowBox[{"SphericalHankelH1", "[", 
+          RowBox[{"i", ",", 
+           FractionBox[
+            RowBox[{"2", " ", "\[Pi]"}], 
+            RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["omega", "\[Prime]",
+           MultilineFunction->None], "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+        RowBox[{"a", " ", "\[Lambda]"}]]}]], "+", 
+     FractionBox[
+      RowBox[{
+       FractionBox[
+        RowBox[{"7.979645340118075`", " ", 
+         RowBox[{"SphericalBesselJ", "[", 
+          RowBox[{"i", ",", 
+           FractionBox[
+            RowBox[{"2", " ", "\[Pi]"}], 
+            RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["omega", "\[Prime]",
+           MultilineFunction->None], "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+        RowBox[{"a", " ", "\[Lambda]"}]], "-", 
+       RowBox[{
+        RowBox[{"omega", "[", 
+         FractionBox["7.979645340118075`", 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["omega", "\[Prime]",
+          MultilineFunction->None], "[", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}]}], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"omega", "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], " ", 
+        RowBox[{
+         SuperscriptBox["gamma", "\[Prime]",
+          MultilineFunction->None], "[", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], "+", 
+       FractionBox[
+        RowBox[{"7.979645340118075`", " ", 
+         RowBox[{"SphericalHankelH1", "[", 
+          RowBox[{"i", ",", 
+           FractionBox[
+            RowBox[{"2", " ", "\[Pi]"}], 
+            RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["omega", "\[Prime]",
+           MultilineFunction->None], "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+        RowBox[{"a", " ", "\[Lambda]"}]]}]]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.671627814694916*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Sum", "[", 
+  RowBox[{
+   RowBox[{"sigma", "[", "\[Lambda]", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "100"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.671627825509945*^9, 3.6716278665146427`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "\[Pi]"], 
+  RowBox[{"5100", " ", 
+   SuperscriptBox["a", "4"], " ", 
+   SuperscriptBox["\[Lambda]", "2"], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     FractionBox[
+      RowBox[{
+       FractionBox[
+        RowBox[{"2", " ", "\[Pi]", " ", 
+         RowBox[{"SphericalBesselJ", "[", 
+          RowBox[{"i", ",", 
+           FractionBox[
+            RowBox[{"2", " ", "\[Pi]"}], 
+            RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["omega", "\[Prime]",
+           MultilineFunction->None], "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+        RowBox[{"a", " ", "\[Lambda]"}]], "-", 
+       RowBox[{"1.27`", " ", 
+        RowBox[{"omega", "[", 
+         FractionBox["7.979645340118075`", 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["omega", "\[Prime]",
+          MultilineFunction->None], "[", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}]}], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "1.27`"}], " ", 
+        RowBox[{"omega", "[", 
+         FractionBox["7.979645340118075`", 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["gamma", "\[Prime]",
+          MultilineFunction->None], "[", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], "+", 
+       FractionBox[
+        RowBox[{"2", " ", "\[Pi]", " ", 
+         RowBox[{"SphericalHankelH1", "[", 
+          RowBox[{"i", ",", 
+           FractionBox[
+            RowBox[{"2", " ", "\[Pi]"}], 
+            RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["omega", "\[Prime]",
+           MultilineFunction->None], "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+        RowBox[{"a", " ", "\[Lambda]"}]]}]], "+", 
+     FractionBox[
+      RowBox[{
+       FractionBox[
+        RowBox[{"7.979645340118075`", " ", 
+         RowBox[{"SphericalBesselJ", "[", 
+          RowBox[{"i", ",", 
+           FractionBox[
+            RowBox[{"2", " ", "\[Pi]"}], 
+            RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["omega", "\[Prime]",
+           MultilineFunction->None], "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+        RowBox[{"a", " ", "\[Lambda]"}]], "-", 
+       RowBox[{
+        RowBox[{"omega", "[", 
+         FractionBox["7.979645340118075`", 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}], " ", 
+        RowBox[{
+         SuperscriptBox["omega", "\[Prime]",
+          MultilineFunction->None], "[", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}]}], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"omega", "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], " ", 
+        RowBox[{
+         SuperscriptBox["gamma", "\[Prime]",
+          MultilineFunction->None], "[", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], 
+          RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], "+", 
+       FractionBox[
+        RowBox[{"7.979645340118075`", " ", 
+         RowBox[{"SphericalHankelH1", "[", 
+          RowBox[{"i", ",", 
+           FractionBox[
+            RowBox[{"2", " ", "\[Pi]"}], 
+            RowBox[{"a", " ", "\[Lambda]"}]]}], "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["omega", "\[Prime]",
+           MultilineFunction->None], "[", 
+          FractionBox["7.979645340118075`", 
+           RowBox[{"a", " ", "\[Lambda]"}]], "]"}]}], 
+        RowBox[{"a", " ", "\[Lambda]"}]]}]]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.671627874945129*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Plot", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"omega", "[", "\[Lambda]", "]"}], " ", "/.", 
+    RowBox[{"a", "\[Rule]", " ", ".00001"}]}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"\[Lambda]", ",", " ", "0", ",", " ", ".0000001"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.671627878236553*^9, 3.671627936905336*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{True, True},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, 0},
+  DisplayFunction->Identity,
+  Frame->{{False, False}, {False, False}},
+  FrameLabel->{{None, None}, {None, None}},
+  FrameTicks->{{Automatic, Automatic}, {Automatic, Automatic}},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    GrayLevel[0.5, 0.4]],
+  Method->{"DefaultBoundaryStyle" -> Automatic, "ScalingFunctions" -> None},
+  PlotRange->{{0, 1.*^-7}, {0., 0.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic}]], "Output",
+ CellChangeTimes->{3.6716279390291023`*^9}]
+}, Open  ]]
+},
+WindowSize->{689, 736},
+WindowMargins->{{Automatic, -29}, {Automatic, 1}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 268, 9, 46, "Input"],
+Cell[851, 33, 148, 4, 48, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1036, 42, 416, 12, 80, "Input"],
+Cell[1455, 56, 320, 9, 54, "Output"],
+Cell[1778, 67, 317, 9, 54, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2132, 81, 116, 2, 28, "Input"],
+Cell[2251, 85, 74, 1, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2362, 91, 907, 28, 46, "Input"],
+Cell[3272, 121, 1784, 52, 82, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5093, 178, 617, 20, 46, "Input"],
+Cell[5713, 200, 4100, 112, 204, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9850, 317, 854, 27, 46, "Input"],
+Cell[10707, 346, 1740, 51, 82, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12484, 402, 906, 28, 46, "Input"],
+Cell[13393, 432, 3615, 100, 268, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17045, 537, 2279, 67, 152, "Input"],
+Cell[19327, 606, 4076, 112, 204, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23440, 723, 239, 6, 28, "Input"],
+Cell[23682, 731, 3980, 108, 204, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[27699, 844, 351, 9, 28, "Input"],
+Cell[28053, 855, 761, 22, 221, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
